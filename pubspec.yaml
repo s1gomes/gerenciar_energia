@@ -1,0 +1,64 @@
+name: gerenciador_energia
+description: "A new Flutter project."
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.8.0-149.0.dev
+
+dependencies:
+  flutter:
+    sdk: flutter
+  shared_preferences: ^2.2.1
+  cupertino_icons: ^1.0.8
+  sqflite: ^2.4.2
+  flutter_bloc: ^9.1.0
+  path_provider: ^2.0.14
+  equatable: ^2.0.5
+  get_it: ^8.0.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  logger: ^2.0.2+1
+  intl: ^0.20.2
+  google_fonts: ^6.2.1
+  build_runner: ^2.4.7
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter packages.
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+
+flutter:
+  uses-material-design: true
+  assets:
+  - assets/images/
+  - assets/google_fonts/
+  - assets/images/eletrodomesticos/
+
+  fonts:
+    - family: GothicA1
+      fonts:
+        - asset: assets/google_fonts/GothicA1-Regular.ttf
+    - family: Raleway
+      fonts:
+        - asset: assets/google_fonts/Raleway-Black.ttf
+          weight: 900
+        - asset: assets/google_fonts/Raleway-Bold.ttf
+          weight: 700
+        - asset: assets/google_fonts/Raleway-Regular.ttf
+    - family: RobotoCondensed
+      fonts:
+        - asset: assets/google_fonts/RobotoCondensed-Bold.ttf
+          weight: 700
+        - asset: assets/google_fonts/RobotoCondensed-Italic.ttf
+          weight: 300
+        - asset: assets/google_fonts/RobotoCondensed-Light.ttf
+        - asset: assets/google_fonts/RobotoCondensed-Regular.ttf
+          style: italic 
