@@ -4,8 +4,13 @@ abstract class EletrodomesticoEvent extends Equatable {
   const EletrodomesticoEvent();
 }
 
-abstract class GetEletrodomesticos extends EletrodomesticoEvent {
- const GetEletrodomesticos();
+class GetEletrodomesticos extends EletrodomesticoEvent {
+  final bool withLoading;
+ const GetEletrodomesticos({this.withLoading = true});
+ 
+  @override
+  // TODO: implement props
+  List<Object?> get props => throw UnimplementedError();
 }
 
 

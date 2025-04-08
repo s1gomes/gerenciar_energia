@@ -14,7 +14,7 @@ class EletrodomesticoRepositoryImpl extends EletrodomesticoRepository {
   );
 
   @override
-  Future<List<Map<String, dynamic>>> getEletrodomestico(
+  Future<List<EletrodomesticoModel>> getEletrodomestico(
       int id
       ) async {
     var eletrodomesticos;
@@ -29,7 +29,7 @@ class EletrodomesticoRepositoryImpl extends EletrodomesticoRepository {
   }
 
   @override
-  Future<List<Map<String, dynamic>>> getAllEletrodomesticos() async {
+  Future<List<EletrodomesticoModel>> getAllEletrodomesticos() async {
     var eletrodomesticos;
     print("eletrodomesticos $eletrodomesticos");
     try {

@@ -4,9 +4,9 @@ import '../../data/models/EletrodomesticoModel.dart';
 
 abstract class EletrodomesticoRepository {
 
-  Future<List<Map<String, dynamic>>> getAllEletrodomesticos();
+  Future<List<EletrodomesticoModel>> getAllEletrodomesticos();
 
-  Future<List<Map<String, dynamic>>> getEletrodomestico(
+  Future<List<EletrodomesticoModel>> getEletrodomestico(
       int id
   );
 

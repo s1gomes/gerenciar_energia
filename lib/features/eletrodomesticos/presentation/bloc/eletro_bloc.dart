@@ -1,11 +1,6 @@
-
-
-
-
 import 'dart:nativewrappers/_internal/vm/lib/ffi_allocation_patch.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:gerenciador_energia/features/eletrodomesticos/data/repository/eletrodomestico_repository_impl.dart';
 import 'package:gerenciador_energia/features/eletrodomesticos/domain/repository/eletro_repository.dart';
 import 'package:gerenciador_energia/features/eletrodomesticos/presentation/bloc/eletro_event.dart';
 import 'package:gerenciador_energia/features/eletrodomesticos/presentation/bloc/eletro_state.dart';

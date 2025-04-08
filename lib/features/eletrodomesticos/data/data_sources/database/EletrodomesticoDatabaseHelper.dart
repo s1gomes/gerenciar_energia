@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'dart:io';
 import 'package:gerenciador_energia/features/eletrodomesticos/data/models/EletrodomesticoModel.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:sqflite/sqflite.dart';
@@ -40,20 +39,52 @@ class EletroDatabaseHelper {
 
   // Crud
 
-  Future<List<Map<String, dynamic>>> getEletrodomestico(int id) async {
+  Future<List<EletrodomesticoModel>> getEletrodomestico(int id) async {
     Database db = await this.database;
-    var eletrodomesticos = await db.rawQuery(
+    final List<Map<String, Object?>> eletrodomesticoMaps = await db.rawQuery(
         'SELECT * FROM $eletrodomesticoTable WHERE $id = \'$id\' '
     );
-    return eletrodomesticos;
+    return [for (final  {
+        'id': id as int,
+      'name': name as String,
+      'voltagem': voltagem as String,
+      'wattshora' : wattshora  as String,
+      'consumoDeclarado' : consumoDeclarado as String,
+      'consumoEstimado' : consumoEstimado as String
+    } in eletrodomesticoMaps
+      ) EletrodomesticoModel(
+        id: id, 
+        name: name, 
+        voltagem: voltagem, 
+        wattshora: wattshora, 
+        consumoDeclarado: consumoDeclarado, 
+        consumoEstimado: consumoEstimado
+      ) 
+    ];
   }
 
-  Future<List<Map<String, dynamic>>> getAllEletrodomesticos() async {
+  Future<List<EletrodomesticoModel>> getAllEletrodomesticos() async {
     Database db = await this.database;
-    var eletrodomesticos = await db.rawQuery(
-        'SELECT * FROM $eletrodomesticoTable'
+    final List<Map<String, Object?>> eletrodomesticoMaps = await db.rawQuery(
+        'SELECT * FROM $eletrodomesticoTable WHERE $id = \'$id\' '
     );
-    return eletrodomesticos;
+    return [for (final  {
+        'id': id as int,
+      'name': name as String,
+      'voltagem': voltagem as String,
+      'wattshora' : wattshora  as String,
+      'consumoDeclarado' : consumoDeclarado as String,
+      'consumoEstimado' : consumoEstimado as String
+    } in eletrodomesticoMaps
+      ) EletrodomesticoModel(
+        id: id, 
+        name: name, 
+        voltagem: voltagem, 
+        wattshora: wattshora, 
+        consumoDeclarado: consumoDeclarado, 
+        consumoEstimado: consumoEstimado
+      ) 
+    ];
   }
 
   Future<int> insertEletro(EletrodomesticoModel eletro) async {

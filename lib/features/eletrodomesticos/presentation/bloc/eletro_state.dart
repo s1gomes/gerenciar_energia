@@ -1,5 +1,7 @@
 
 
+import 'package:gerenciador_energia/features/eletrodomesticos/data/models/EletrodomesticoModel.dart';
+
 abstract class EletrodomesticosStates {
   const EletrodomesticosStates();
 }
@@ -10,7 +12,7 @@ class LoadingEletrodomesticos extends EletrodomesticosStates {}
 
 
 class SuccessGetEletrodomesticos extends EletrodomesticosStates{
-  final List<Map<String, String>> eletrodomesticos;
+  final List<EletrodomesticoModel> eletrodomesticos;
 
   SuccessGetEletrodomesticos(this.eletrodomesticos);
 }
