@@ -15,7 +15,6 @@ class EletroDatabaseHelper {
   String consumoDeclarado = 'consumoDeclarado';
   String consumoEstimado = 'consumoEstimado';
 
-  EletroDatabaseHelper._createInstance();
 
   get database async {
     if (_database != null) return _database;

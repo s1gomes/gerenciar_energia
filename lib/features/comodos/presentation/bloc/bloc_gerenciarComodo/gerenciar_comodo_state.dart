@@ -1,26 +1,5 @@
 import 'package:equatable/equatable.dart';
 
-// enum GerenciarComodoStatusS {
-//   initial,
-//   success,
-//   error,
-//   isUpdating,
-//   loading,
-//   updated,
-//   created,
-//   editing
-// }
-
-// extension GerenciarComodoStatusX on GerenciarComodoStatusS {
-//   bool get isInitial => this == GerenciarComodoStatusS.initial;
-//   bool get isSuccess => this == GerenciarComodoStatusS.success;
-//   bool get isEditing => this == GerenciarComodoStatusS.editing;
-//   bool get isError => this == GerenciarComodoStatusS.error;
-//   bool get isUpdating => this == GerenciarComodoStatusS.isUpdating;
-//   bool get isLoading => this == GerenciarComodoStatusS.loading;
-//   bool get isUpdated => this == GerenciarComodoStatusS.updated;
-//   bool get isCreated => this == GerenciarComodoStatusS.created;
-// }
 
 sealed class GerenciarComodoState extends Equatable {
   const GerenciarComodoState();

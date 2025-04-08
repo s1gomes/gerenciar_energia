@@ -7,11 +7,11 @@ import '../models/EletrodomesticoModel.dart';
 class EletrodomesticoRepositoryImpl extends EletrodomesticoRepository {
   
 
-  final EletroDatabaseHelper eletroDatabaseHelper = EletroDatabaseHelper();
+  final EletroDatabaseHelper eletroDatabaseHelper;
 
-  // EletrodomesticoRepositoryImpl(
-  //     this.eletroDatabaseHelper
-  // );
+  EletrodomesticoRepositoryImpl(
+      this.eletroDatabaseHelper
+  );
 
   @override
   Future<List<Map<String, dynamic>>> getEletrodomestico(

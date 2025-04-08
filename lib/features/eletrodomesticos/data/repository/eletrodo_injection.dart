@@ -10,6 +10,6 @@ Future<void> initInjections() async {
 }
 
 initEletrodomesticsoInjections() {
-  sl.registerSingleton(EletrodomesticoRepositoryImpl());
+  sl.registerSingleton(EletrodomesticoRepositoryImpl(sl()));
   
 }

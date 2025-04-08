@@ -33,15 +33,3 @@ class UpdateComodo extends GerenciarComodoBlocEvents {
   @override
   List<Object?> get props => [nomeComodo, idComodo, urlImageComodo];
 }
-// receber url das imagens
-
-
-// class ImagemSelecionadaEvent extends ComodoEvents {
-//   @override
-//   List<Object?> get props => [];
-// }
-
-// class EditarImagemSelecionadaEvent extends ComodoEvents {
-//   @override
-//   List<Object?> get props => [];
-// }
