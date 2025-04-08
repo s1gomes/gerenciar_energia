@@ -1,5 +1,6 @@
 
 
+import 'package:gerenciador_energia/features/eletrodomesticos/data/data_sources/database/EletrodomesticoDatabaseHelper.dart';
 import 'package:gerenciador_energia/features/eletrodomesticos/data/repository/eletrodomestico_repository_impl.dart';
 import 'package:get_it/get_it.dart';
 
@@ -11,5 +12,6 @@ Future<void> initInjections() async {
 
 initEletrodomesticsoInjections() {
   sl.registerSingleton(EletrodomesticoRepositoryImpl(sl()));
+  sl.registerSingleton(EletroDatabaseHelper);
   
 }

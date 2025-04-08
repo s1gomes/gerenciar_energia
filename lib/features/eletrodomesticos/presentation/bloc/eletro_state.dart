@@ -10,11 +10,12 @@ class InitialState extends EletrodomesticosStates {}
 
 class LoadingEletrodomesticos extends EletrodomesticosStates {}
 
+class IsEmptyList extends EletrodomesticosStates {}
 
 class SuccessGetEletrodomesticos extends EletrodomesticosStates{
   final List<EletrodomesticoModel> eletrodomesticos;
-
   SuccessGetEletrodomesticos(this.eletrodomesticos);
+  
 }
 
 class ErrorGetEletrodomesticos extends EletrodomesticosStates{

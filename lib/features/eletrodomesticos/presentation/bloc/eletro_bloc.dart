@@ -1,6 +1,5 @@
-import 'dart:nativewrappers/_internal/vm/lib/ffi_allocation_patch.dart';
-
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:gerenciador_energia/features/eletrodomesticos/data/models/EletrodomesticoModel.dart';
 import 'package:gerenciador_energia/features/eletrodomesticos/domain/repository/eletro_repository.dart';
 import 'package:gerenciador_energia/features/eletrodomesticos/presentation/bloc/eletro_event.dart';
 import 'package:gerenciador_energia/features/eletrodomesticos/presentation/bloc/eletro_state.dart';
@@ -19,12 +18,21 @@ class EletrodomesticoBloc extends Bloc<EletrodomesticoEvent, EletrodomesticosSta
   ) async {
     emitter(LoadingEletrodomesticos());
 
-    final eletrodomesticos = await eletrodomesticoRepository.call();
+    try {
+      final eletrodomesticos = await eletrodomesticoRepository.getAllEletrodomesticos();
+       if (eletrodomesticos.isNotEmpty) {
+          emitter(SuccessGetEletrodomesticos(eletrodomesticos));
+        } else {
+          emitter(IsEmptyList());
+        }
+    
+    } catch (exception) {
+      emitter(ErrorGetEletrodomesticos(exception.toString()));
+    }
 
-    eletrodomesticos.fold((l) {
-      emitter(ErrorGetEletrodomesticos(l.e));
-    }, (r) {
-      emitter(SuccessGetEletrodomesticos(r));
-    });
+
+    
+
+  
   }
 }

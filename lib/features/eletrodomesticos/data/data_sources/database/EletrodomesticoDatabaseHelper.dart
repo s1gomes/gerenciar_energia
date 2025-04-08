@@ -1,8 +1,11 @@
 import 'dart:async';
+import 'dart:io';
 import 'package:gerenciador_energia/features/eletrodomesticos/data/models/EletrodomesticoModel.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:sqflite/sqflite.dart';
 
+
+// todo: colocar construtor 
 class EletroDatabaseHelper {
   EletroDatabaseHelper._();
   static final EletroDatabaseHelper eletroDatabaseHelper = EletroDatabaseHelper._();
