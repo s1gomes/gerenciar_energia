@@ -7,8 +7,7 @@ import 'package:sqflite/sqflite.dart';
 
 // todo: colocar construtor 
 class EletroDatabaseHelper {
-  EletroDatabaseHelper._();
-  static final EletroDatabaseHelper eletroDatabaseHelper = EletroDatabaseHelper._();
+  static EletroDatabaseHelper? _eletroDatabaseHelper;
   static Database? _database;
   String eletrodomesticoTable = 'eletrodomesticoTable';
   String id = 'id';
@@ -16,17 +15,22 @@ class EletroDatabaseHelper {
   String wattshora = 'wattshora';
   String consumoDeclarado = 'consumoDeclarado';
   String consumoEstimado = 'consumoEstimado';
-
-
-  get database async {
-    if (_database != null) return _database;
-    return await _initializeDatabase();
+  EletroDatabaseHelper._createInstance();
+  
+  factory EletroDatabaseHelper() {
+    _eletroDatabaseHelper ??= EletroDatabaseHelper._createInstance();;
+    return _eletroDatabaseHelper!;
   }
 
+  Future<Database> get database async {
+    _database ??= await initializeDatabase();
+    return database;
+  }
 
-  _initializeDatabase() async {
-    var directory = await getApplicationDocumentsDirectory();
+  Future<Database> initializeDatabase() async {
+    Directory directory = await getApplicationDocumentsDirectory();
     String path = '${directory.path}eletrodomesticos_database.db';
+    print("Database Created");
     return await openDatabase(
         path, version: 1, onCreate: _createTable);
   }

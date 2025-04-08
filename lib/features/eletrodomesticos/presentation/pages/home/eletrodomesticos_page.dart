@@ -1,14 +1,12 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:gerenciador_energia/features/comodos/presentation/bloc/bloc_comodos/comodo_event.dart';
 import 'package:gerenciador_energia/features/eletrodomesticos/data/models/EletrodomesticoModel.dart';
 import 'package:gerenciador_energia/features/eletrodomesticos/data/repository/eletrodo_injection.dart';
 import 'package:gerenciador_energia/features/eletrodomesticos/domain/repository/eletro_repository.dart';
 import 'package:gerenciador_energia/features/eletrodomesticos/presentation/bloc/eletro_event.dart';
 import 'package:gerenciador_energia/features/eletrodomesticos/presentation/bloc/eletro_state.dart';
 import 'package:gerenciador_energia/features/eletrodomesticos/presentation/bloc/eletro_bloc.dart';
-import '../../../data/data_sources/database/EletrodomesticoDatabaseHelper.dart';
 
 
 class EletrodomesticosPage extends StatefulWidget {

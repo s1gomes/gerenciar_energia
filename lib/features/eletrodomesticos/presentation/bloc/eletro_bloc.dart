@@ -1,5 +1,4 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:gerenciador_energia/features/eletrodomesticos/data/models/EletrodomesticoModel.dart';
 import 'package:gerenciador_energia/features/eletrodomesticos/domain/repository/eletro_repository.dart';
 import 'package:gerenciador_energia/features/eletrodomesticos/presentation/bloc/eletro_event.dart';
 import 'package:gerenciador_energia/features/eletrodomesticos/presentation/bloc/eletro_state.dart';

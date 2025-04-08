@@ -1,6 +1,4 @@
-
-
-import '../../data/models/EletrodomesticoModel.dart';
+import 'package:gerenciador_energia/features/eletrodomesticos/data/models/EletrodomesticoModel.dart';
 
 abstract class EletrodomesticoRepository {
 

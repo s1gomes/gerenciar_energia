@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gerenciador_energia/data/db/db.dart';
 import 'package:gerenciador_energia/features/comodos/presentation/bloc/bloc_gerenciarComodo/gerenciar_comodo_bloc.dart';
-
 import 'features/comodos/presentation/bloc/bloc_comodos/comodo_bloc.dart';
 import 'features/mainpage/presentation/pages/home/main_page.dart';
 

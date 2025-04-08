@@ -1,8 +1,8 @@
 
 import 'package:gerenciador_energia/features/eletrodomesticos/data/data_sources/database/EletrodomesticoDatabaseHelper.dart';
+import 'package:gerenciador_energia/features/eletrodomesticos/data/models/EletrodomesticoModel.dart';
 import 'package:gerenciador_energia/features/eletrodomesticos/domain/repository/eletro_repository.dart';
 
-import '../models/EletrodomesticoModel.dart';
 
 class EletrodomesticoRepositoryImpl extends EletrodomesticoRepository {
   
@@ -12,6 +12,7 @@ class EletrodomesticoRepositoryImpl extends EletrodomesticoRepository {
   EletrodomesticoRepositoryImpl(
       this.eletroDatabaseHelper
   );
+  
 
   @override
   Future<List<EletrodomesticoModel>> getEletrodomestico(
