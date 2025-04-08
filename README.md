@@ -1,20 +1,9 @@
-<<<<<<< HEAD
 # gerenciador_energia
+Projeto autoral em desenvolvimento.
 
-A new Flutter project.
+Gerenciador do consumo de energia residencial.
 
-## Getting Started
+## Descrição
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-=======
-# gerenciar_energia
->>>>>>> aeea58126b2ec03352ededf14c6857946b94e45f
+Aplicação realizará a comunicação com equipamento arduíno, posicionado entre a tomada e a fonte de energia do eletrodoméstico, que transmite a corrente, em tempo real, via web para a aplicação.
+O equipamento arduino conta com sensor de corrente, relógio RTC e placa wifi. Isso possibilitará sua comunicação com a aplicação, a qual gerenciará os dados e realizará a geração de gráficos com tais informações.
