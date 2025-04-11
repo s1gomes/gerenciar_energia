@@ -1,10 +1,9 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
-import '../../../../comodos/presentation/pages/home/main_comodos.dart';
-import '../../../../eletrodomesticos/presentation/pages/home/eletrodomesticos_page.dart';
-import '../../../../estatisticas/presentation/pages/estatistica_page.dart';
+import 'package:gerenciador_energia/features/comodos/presentation/pages/home/main_comodos.dart';
+import 'package:gerenciador_energia/features/eletrodomesticos/presentation/pages/home/eletrodomesticos_page.dart';
+import 'package:gerenciador_energia/features/estatisticas/presentation/pages/estatistica_page.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
@@ -26,7 +25,6 @@ class _MainPageState extends State<MainPage> {
             currentPageIndex = index;
           });
         },
-        // Badge(child: Icon(Icons.notifications_sharp)),
         indicatorColor: Colors.amber,
         selectedIndex: currentPageIndex,
         destinations: const <Widget>[
