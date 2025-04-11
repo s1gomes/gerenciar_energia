@@ -2,16 +2,13 @@
 import 'package:gerenciador_energia/features/eletrodomesticos/data/data_sources/database/EletrodomesticoDatabaseHelper.dart';
 import 'package:gerenciador_energia/features/eletrodomesticos/data/models/EletrodomesticoModel.dart';
 import 'package:gerenciador_energia/features/eletrodomesticos/domain/repository/eletro_repository.dart';
+import 'package:get_it/get_it.dart';
 
 
 class EletrodomesticoRepositoryImpl extends EletrodomesticoRepository {
   
 
-  final EletroDatabaseHelper eletroDatabaseHelper;
-
-  EletrodomesticoRepositoryImpl(
-      this.eletroDatabaseHelper
-  );
+  final eletroDatabaseHelper = GetIt.I.call<EletroDatabaseHelper>();
   
 
   @override

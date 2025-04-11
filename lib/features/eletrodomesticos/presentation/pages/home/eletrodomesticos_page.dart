@@ -7,6 +7,7 @@ import 'package:gerenciador_energia/features/eletrodomesticos/domain/repository/
 import 'package:gerenciador_energia/features/eletrodomesticos/presentation/bloc/eletro_event.dart';
 import 'package:gerenciador_energia/features/eletrodomesticos/presentation/bloc/eletro_state.dart';
 import 'package:gerenciador_energia/features/eletrodomesticos/presentation/bloc/eletro_bloc.dart';
+import 'package:get_it/get_it.dart';
 
 
 class EletrodomesticosPage extends StatefulWidget {
@@ -18,7 +19,7 @@ class EletrodomesticosPage extends StatefulWidget {
 
 class _EletrodomesticosPageState extends State<EletrodomesticosPage> {
 
-  final EletrodomesticoBloc _eletrodomesticoBloc = EletrodomesticoBloc(eletrodomesticoRepository: sl<EletrodomesticoRepository>());
+  final _eletrodomesticoBloc = EletrodomesticoBloc(eletrodomesticoRepository: GetIt.I.call<EletrodomesticoRepository>());
   List<EletrodomesticoModel> eletrodomesticos = [];
 
 
@@ -28,10 +29,6 @@ class _EletrodomesticosPageState extends State<EletrodomesticosPage> {
     callEletrodomesticos();
     super.initState();
   }
-  // Future getEletrodomesticos() async {
-  //   List<EletrodomesticoModel> eletrodomesticos = await getAllEletrodomesticos();
-  //   return eletrodomesticos;
-  // }
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +38,6 @@ class _EletrodomesticosPageState extends State<EletrodomesticosPage> {
         backgroundColor: Colors.green,
         title: const Text("Eletrodomésticos"),
       ),
-      // drawer: const AppDrawerWidget(),
       body: BlocConsumer(
         bloc: _eletrodomesticoBloc,
         listener: (context, state) {
